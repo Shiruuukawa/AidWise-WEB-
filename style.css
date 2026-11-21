@@ -1188,3 +1188,28 @@ img {
 .glass-nav.webgl-glass-active .nav-selection {
   background: rgba(255, 255, 255, 0.12);
 }
+
+
+.glass-nav.webgl-glass-active {
+  background: transparent !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.glass-nav.webgl-glass-active > canvas {
+  pointer-events: none;
+  border-radius: inherit;
+  filter: none !important;
+}
+
+.glass-nav.webgl-glass-active .glass-reflection {
+  z-index: 1;
+}
+
+.glass-nav.webgl-glass-active .nav-selection {
+  z-index: 2;
+}
+
+.glass-nav.webgl-glass-active .nav-button {
+  z-index: 3;
+}
