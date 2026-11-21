@@ -892,7 +892,10 @@ p {
   position: fixed;
   z-index: 100;
   left: 50%;
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 5px);
+  bottom: max(
+  5px,
+  calc(env(safe-area-inset-bottom, 0px) - 12px)
+  );
   transform: translateX(-50%);
   width: min(354px, calc(100vw - 34px));
   height: 65px;
@@ -1131,4 +1134,33 @@ html {
 
 body {
   overscroll-behavior-y: none;
+}
+
+
+/* Disable text selection and long-press menus */
+
+html,
+body,
+body * {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keep search boxes and inputs working */
+input,
+textarea,
+select,
+[contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
+/* Prevent image dragging */
+img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
