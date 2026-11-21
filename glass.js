@@ -24,7 +24,7 @@ if (nav && content && window.html2canvas) {
       tintStrength: 0.010,
 
       // Low blur, like Flutter
-      canvasBlur: 0.8,
+      canvasBlur: 0.2,
       canvasOpacity: 1.0,
 
       // iPhone performance
