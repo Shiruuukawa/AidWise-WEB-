@@ -11,7 +11,7 @@ if (nav && content && window.html2canvas) {
       html2canvas: window.html2canvas,
 
       // Clear, subtle refraction
-      refraction: 0.14,
+      refraction: 0.10,
       twist: 0.06,
       edgeExponent: 5.0,
 
@@ -21,10 +21,10 @@ if (nav && content && window.html2canvas) {
 
       // Nearly invisible white tint
       tint: [1, 1, 1],
-      tintStrength: 0.0196,
+      tintStrength: 0.010,
 
       // Low blur, like Flutter
-      canvasBlur: 1.0,
+      canvasBlur: 0.8,
       canvasOpacity: 1.0,
 
       // iPhone performance
