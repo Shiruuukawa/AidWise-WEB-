@@ -1072,57 +1072,54 @@ p {
   }
 }
 
-/* Hide scrollbars while keeping scrolling enabled */
+
+/* AidWise scrolling fix */
+
 html {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+  overflow-x: clip;
+  overflow-y: auto;
+  height: auto;
+  scroll-behavior: smooth;
 }
 
 body {
-  scrollbar-width: none;
-  overscroll-behavior-y: none;
-  -ms-overflow-style: none;
+  overflow-x: clip;
+  overflow-y: visible;
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
+/* Keep the content in normal document flow */
+.app-view {
+  height: auto;
+  overflow: visible;
+  touch-action: pan-y;
 }
 
-html {
-  overflow-x: hidden;
+/* Hide scrollbar on mobile without disabling scrolling */
+@media (hover: none) and (pointer: coarse) {
+  html {
+    scrollbar-width: none;
+  }
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
 }
 
-body {
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-}
+/* Show a narrow scrollbar on desktop */
+@media (hover: hover) and (pointer: fine) {
+  html {
+    scrollbar-width: thin;
+  }
 
-/* Disable text selection and long-press highlighting */
-body,
-button,
-span,
-p,
-h1,
-h2,
-h3,
-label,
-div {
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
-}
+  html::-webkit-scrollbar {
+    width: 8px;
+  }
 
-input,
-textarea,
-select {
-  -webkit-user-select: text;
-  user-select: text;
-  -webkit-touch-callout: default;
-}
-
-img {
-  -webkit-user-drag: none;
-  user-select: none;
+  html::-webkit-scrollbar-thumb {
+    background: rgba(130, 130, 130, 0.35);
+    border-radius: 10px;
+  }
 }
