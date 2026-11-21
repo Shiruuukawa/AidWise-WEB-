@@ -885,8 +885,6 @@ p {
   margin-top: 30px;
 }
 
-/* Floating Liquid Glass-style navigation */
-
 .glass-nav {
   --active: 0;
   position: fixed;
@@ -1075,9 +1073,6 @@ p {
   }
 }
 
-
-/* AidWise scrolling fix */
-
 html {
   overflow-x: clip;
   overflow-y: auto;
@@ -1093,14 +1088,12 @@ body {
   margin: 0;
 }
 
-/* Keep the content in normal document flow */
 .app-view {
   height: auto;
   overflow: visible;
   touch-action: pan-y;
 }
 
-/* Hide scrollbar on mobile without disabling scrolling */
 @media (hover: none) and (pointer: coarse) {
   html {
     scrollbar-width: none;
@@ -1111,7 +1104,6 @@ body {
   }
 }
 
-/* Show a narrow scrollbar on desktop */
 @media (hover: hover) and (pointer: fine) {
   html {
     scrollbar-width: thin;
@@ -1127,7 +1119,6 @@ body {
   }
 }
 
-/* Disable Android pull-to-refresh */
 html {
   overscroll-behavior-y: none;
 }
@@ -1135,9 +1126,6 @@ html {
 body {
   overscroll-behavior-y: none;
 }
-
-
-/* Disable text selection and long-press menus */
 
 html,
 body,
@@ -1148,7 +1136,6 @@ body * {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Keep search boxes and inputs working */
 input,
 textarea,
 select,
@@ -1158,25 +1145,21 @@ select,
   -webkit-touch-callout: default;
 }
 
-/* Prevent image dragging */
 img {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   user-select: none;
 }
 
-/* Disable pinch and double-tap zoom */
 html,
 body {
   touch-action: pan-y;
 }
 
-/* Preserve normal vertical scrolling */
 .app-view {
   touch-action: pan-y;
 }
 
-/* Keep buttons responsive */
 button,
 a {
   touch-action: manipulation;

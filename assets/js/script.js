@@ -1,13 +1,6 @@
 
 "use strict";
 
-// =====================================================
-// AidWise Web
-// Client-side recreation of the Flutter design.
-// Medical guides other than the blister example are
-// illustrative and need clinical review before release.
-// =====================================================
-
 const PARTS = [
   "Head",
   "Face",
@@ -1385,8 +1378,6 @@ if (window.matchMedia) {
     });
 }
 
-
-// Prevent iOS pinch-to-zoom gestures
 document.addEventListener("gesturestart", (event) => {
   event.preventDefault();
 }, { passive: false });
@@ -1395,14 +1386,11 @@ document.addEventListener("gesturechange", (event) => {
   event.preventDefault();
 }, { passive: false });
 
-// Prevent multi-touch zoom
 document.addEventListener("touchmove", (event) => {
   if (event.touches.length > 1) {
     event.preventDefault();
   }
 }, { passive: false });
 
-
-// Initialize the app.
 applyTheme();
 render();
