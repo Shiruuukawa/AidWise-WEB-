@@ -1081,6 +1081,7 @@ html {
 
 body {
   scrollbar-width: none;
+  overscroll-behavior-y: none;
   -ms-overflow-style: none;
 }
 
@@ -1097,9 +1098,4 @@ html {
 body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-}
-
-html,
-body {
-  overscroll-behavior-y: none;
 }
