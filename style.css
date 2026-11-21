@@ -1071,3 +1071,35 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* Hide scrollbars while keeping scrolling enabled */
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keep vertical scrolling smooth */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+html,
+body {
+  overscroll-behavior-y: none;
+}
