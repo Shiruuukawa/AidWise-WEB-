@@ -2,7 +2,7 @@
 
 AidWise is a first-aid assistance application designed to provide accessible information and step-by-step guidance for common injuries and emergency situations.
 
-This repository contains a sample web-based version of AidWise, developed for demonstration, testing, and evaluation purposes.
+This repository contains a sample web-based version of [AidWise](https://github.com/Shiruuukawa/AidWise-First-Aid-Guide-Mobile-Application-), developed for demonstration, testing, and evaluation purposes.
 
 ## Website
 
@@ -37,7 +37,7 @@ Please note the following:
 
 - This is not the final or official release of AidWise.
 - Some features, content, and functionality are incomplete or subject to change.
-- The web version does not represent the full capabilities of the original Flutter application.
+- The web version does not represent the full capabilities of the [original Flutter application](https://github.com/Shiruuukawa/AidWise-First-Aid-Guide-Mobile-Application-).
 - First-aid information is provided for demonstration and educational purposes only. Some content has not undergone professional medical review.
 - This application should not replace professional medical advice or emergency assistance.
 
