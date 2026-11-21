@@ -10,7 +10,7 @@
   --surface-hover: #ededed;
   --red-surface: #fcebec;
   --border: rgba(0, 0, 0, 0.055);
-  --glass: rgba(245, 246, 248, 0.24);
+  --glass: rgba(245, 246, 248, 0.06);
   --glass-edge: rgba(255, 255, 255, 0.85);
   --nav-text: #202126;
   --shadow: 0 10px 32px rgba(0, 0, 0, 0.07);
@@ -28,7 +28,7 @@
   --surface-hover: #2d2f37;
   --red-surface: #382124;
   --border: rgba(255, 255, 255, 0.07);
-  --glass: rgba(48, 50, 59, 0.23);
+  --glass: rgba(48, 50, 59, 0.08);
   --glass-edge: rgba(255, 255, 255, 0.25);
   --nav-text: #ffffff;
   --shadow: 0 12px 38px rgba(0, 0, 0, 0.22);
@@ -153,7 +153,7 @@ a {
 .app-view {
   max-width: 750px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: calc(100vh - 58px);
   padding: 25px 24px 145px;
 }
 
@@ -904,8 +904,8 @@ p {
   overflow: hidden;
   background: var(--glass);
   border: 1px solid rgba(180, 185, 195, 0.27);
-  backdrop-filter: blur(3px) saturate(160%) contrast(104%);
-  -webkit-backdrop-filter: blur(3px) saturate(160%) contrast(104%);
+  backdrop-filter: blur(0.5px) saturate(110%) contrast(100%);
+  -webkit-backdrop-filter: blur(0.5px) saturate(110%) contrast(100%);
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.13),
     inset 0 1.5px 1px var(--glass-edge),
@@ -1073,7 +1073,6 @@ p {
 }
 
 /* Hide scrollbars while keeping scrolling enabled */
-
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -1090,7 +1089,6 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-/* Keep vertical scrolling smooth */
 html {
   overflow-x: hidden;
 }
@@ -1099,7 +1097,6 @@ body {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
-
 
 /* Disable text selection and long-press highlighting */
 body,
@@ -1117,7 +1114,6 @@ div {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Keep text inputs selectable and editable */
 input,
 textarea,
 select {
@@ -1126,90 +1122,7 @@ select {
   -webkit-touch-callout: default;
 }
 
-/* Prevent dragging images */
 img {
   -webkit-user-drag: none;
   user-select: none;
-}
-
-
-
-/* AidWise Clear Liquid Glass */
-
-.glass-nav.webgl-glass-active {
-  background: rgba(255, 255, 255, 0.01);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-
-  border: 1px solid rgba(255, 255, 255, 0.32);
-
-  box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.07),
-    inset 0 1px 1px rgba(255, 255, 255, 0.55),
-    inset 0 -1px 1px rgba(255, 255, 255, 0.12);
-}
-
-.glass-nav.webgl-glass-active > canvas {
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-/* Subtle surface highlights */
-.glass-nav.webgl-glass-active .glass-reflection {
-  background: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 0.13),
-    rgba(255, 255, 255, 0.015) 45%,
-    transparent 75%
-  );
-  z-index: 1;
-}
-
-/* Clear sliding navigation indicator */
-.glass-nav.webgl-glass-active .nav-selection {
-  background: rgba(255, 255, 255, 0.13);
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.40),
-    0 2px 8px rgba(0, 0, 0, 0.04);
-  z-index: 2;
-}
-
-.glass-nav.webgl-glass-active .nav-button {
-  z-index: 3;
-}
-
-/* Dark mode */
-[data-theme="dark"] .glass-nav.webgl-glass-active {
-  background: rgba(0, 0, 0, 0.01);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-[data-theme="dark"]
-.glass-nav.webgl-glass-active .nav-selection {
-  background: rgba(255, 255, 255, 0.12);
-}
-
-
-.glass-nav.webgl-glass-active {
-  background: transparent !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-}
-
-.glass-nav.webgl-glass-active > canvas {
-  pointer-events: none;
-  border-radius: inherit;
-  filter: none !important;
-}
-
-.glass-nav.webgl-glass-active .glass-reflection {
-  z-index: 1;
-}
-
-.glass-nav.webgl-glass-active .nav-selection {
-  z-index: 2;
-}
-
-.glass-nav.webgl-glass-active .nav-button {
-  z-index: 3;
 }
