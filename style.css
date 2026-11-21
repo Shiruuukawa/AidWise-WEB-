@@ -1164,3 +1164,20 @@ img {
   -webkit-user-select: none;
   user-select: none;
 }
+
+/* Disable pinch and double-tap zoom */
+html,
+body {
+  touch-action: pan-y;
+}
+
+/* Preserve normal vertical scrolling */
+.app-view {
+  touch-action: pan-y;
+}
+
+/* Keep buttons responsive */
+button,
+a {
+  touch-action: manipulation;
+}

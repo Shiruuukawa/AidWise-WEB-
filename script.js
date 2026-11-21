@@ -1385,6 +1385,24 @@ if (window.matchMedia) {
     });
 }
 
+
+// Prevent iOS pinch-to-zoom gestures
+document.addEventListener("gesturestart", (event) => {
+  event.preventDefault();
+}, { passive: false });
+
+document.addEventListener("gesturechange", (event) => {
+  event.preventDefault();
+}, { passive: false });
+
+// Prevent multi-touch zoom
+document.addEventListener("touchmove", (event) => {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+}, { passive: false });
+
+
 // Initialize the app.
 applyTheme();
 render();
