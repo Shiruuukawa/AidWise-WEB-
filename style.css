@@ -892,7 +892,7 @@ p {
   position: fixed;
   z-index: 100;
   left: 50%;
-  bottom: max(8px, env(safe-area-inset-bottom, 0px) + 4px);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 5px);
   transform: translateX(-50%);
   width: min(354px, calc(100vw - 34px));
   height: 65px;
@@ -1124,22 +1124,11 @@ body {
   }
 }
 
-/* Disable pull-to-refresh on Android */
-html,
-body {
+/* Disable Android pull-to-refresh */
+html {
   overscroll-behavior-y: none;
 }
 
-/* Keep normal vertical scrolling */
-html {
-  overflow-y: auto;
-}
-
 body {
-  min-height: 100vh;
-}
-
-/* Allow vertical touch scrolling */
-.app-view {
-  touch-action: pan-y;
+  overscroll-behavior-y: none;
 }
